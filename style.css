@@ -16,3 +16,20 @@ body {
 .footnote a:visited { /* prevents stupid purple thing */
     color: #4a4a4a;
 }
+
+.hidden {
+    display: none;
+}
+
+button {
+    background-color: #292929;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #292929;
+    color: white;
+    padding: 5px;
+}
+
+.newcatbtn {
+    margin-top: 10px;
+}
