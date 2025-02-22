@@ -1,0 +1,18 @@
+body {
+    background-color: #101010;
+    color: white;
+    font-family: "Ubuntu", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.footnote {
+    margin: 0;
+    color: gray;
+}
+
+.footnote a {
+    color: #4a4a4a;
+}
+
+.footnote a:visited { /* prevents stupid purple thing */
+    color: #4a4a4a;
+}
