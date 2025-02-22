@@ -4,7 +4,7 @@ const loader = document.querySelector("#loader");
 const newcatbtn = document.querySelector(".newcatbtn");
 
 if (Math.random() < 1/50) {
-    document.querySelector("body").style.backgroundImage = "url(https://static.wikia.nocookie.net/fortnite_gamepedia/images/d/dd/RecruitJonesy_Chapter_1.png/revision/latest?cb=20191028202138)";
+    document.querySelector("body").style.backgroundImage = "url(pp.png)";
     document.querySelector("body").style.backgroundColor = "dimgray";
     setTimeout(()=>{alert("FORTNITE MODE ACTIVATED");},100);
 }
