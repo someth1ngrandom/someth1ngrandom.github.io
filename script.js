@@ -33,3 +33,9 @@ newcatbtn.addEventListener("click", () => {
     };
 
 });
+
+if (Math.random() < 1/100) {
+    document.querySelector("body").style.backgroundImage = "url(https://static.wikia.nocookie.net/fortnite_gamepedia/images/d/dd/RecruitJonesy_Chapter_1.png/revision/latest?cb=20191028202138)";
+    document.querySelector("body").style.backgroundColor = "dimgray";
+    setTimeout(()=>{alert("FORTNITE MODE ACTIVATED");},100);
+}
