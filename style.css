@@ -28,6 +28,8 @@ button {
     border-color: #292929;
     color: white;
     padding: 5px;
+
+    font-family: "Ubuntu", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .newcatbtn {
@@ -41,6 +43,8 @@ input {
     border-color: #292929;
     color: white;
     padding: 5px;
+
+    font-family: "Ubuntu", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 input:focus {
