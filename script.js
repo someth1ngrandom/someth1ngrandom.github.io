@@ -4,7 +4,7 @@ const loader = document.querySelector("#loader");
 const newcatbtn = document.querySelector(".newcatbtn");
 const requestbtn = document.querySelector("#request");
 const tagsinput = document.querySelector("#tags");
-const regex = /^[a-z0-9 ,_-]+$/i;
+const regex = /^[a-z0-9§ ,_-]+$/i;
 const isSafe = (input) => { return regex.test(input); };
 
 let global = {};
@@ -29,8 +29,8 @@ if (!cat.complete) {
 
 newcatbtn.addEventListener("click", () => {
     catstuff.classList.add("hidden");
-    loader.classList.remove("hidden");
     loader.innerHTML = "loading cat...";
+    loader.classList.remove("hidden");
 
     global.catImgUrl = "https://cataas.com/cat?t=" + new Date().getTime();
     const newImg = new Image();
@@ -53,11 +53,24 @@ requestbtn.addEventListener("click", () => {
     if (!isSafe(tags)) return;
 
     catstuff.classList.add("hidden");
+    loader.innerHTML = "loading cat...";
     loader.classList.remove("hidden");
 
+    const splitTags = tags.split(" ");
+    let finalTags = "";
+    
+    for (let i = 0; i < splitTags.length; i++) {
+        const tag = splitTags[i];
+        const replacedTag = tag.replace(/§/g, " ");
 
+        finalTags += replacedTag + ",";
+    }
 
-    global.catImgUrl = `https://cataas.com/cat/${tags}?t=${new Date().getTime()}`;
+    if (finalTags.slice(-1)) { // check for trailing comma
+        finalTags = finalTags.slice(0, -1); // remove it
+    }
+
+    global.catImgUrl = `https://cataas.com/cat/${finalTags}?t=${new Date().getTime()}`;
     console.log(global.catImgUrl);
     const newImg = new Image();
     newImg.src = global.catImgUrl;
